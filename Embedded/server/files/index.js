@@ -1,5 +1,5 @@
 async function loadModel() {
-  return await tf.loadLayersModel("http://127.0.0.1:8080/model.json");
+  return await tf.loadLayersModel("/model.json");
 }
 
 function getDigitsFromPrediction(prediction) {
