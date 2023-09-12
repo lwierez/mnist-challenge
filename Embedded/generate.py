@@ -33,12 +33,20 @@ model_wa = Sequential([
     model
 ])
 
+model.compile(
+    optimizer = 'adam',
+    loss = SparseCategoricalCrossentropy(),
+    metrics = ['accuracy']
+)
+
 model_wa.compile(
     optimizer = 'adam',
     loss = SparseCategoricalCrossentropy(),
-    metrics=['accuracy']
+    metrics = ['accuracy']
 )
 
 model_wa.fit(x, y, validation_split=0.2, epochs=200)
 
-model.save(model, "./model.h5")
+model.evaluate(x_test, y_test)
+
+model.save("./model.h5")
