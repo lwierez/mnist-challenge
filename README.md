@@ -8,6 +8,8 @@ This repository contains the database (in MNIST). [More details on this dataset]
 
 The code in Python is written in different Jupyter notebooks.
 
+The folder "Embedded" presents an integration of the model into a web page.
+
 ## Dataset format
 
 The dataset is stored in idx format. A module in this repository allows to read it.
